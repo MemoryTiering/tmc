@@ -1,0 +1,561 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Mon Feb 16 10:22:04 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_axi_latency_injector_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_axi_latency_injector_0_0 (xilinx.com:user:axi_latency_injector:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Mon Feb 16 10:13:08 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_axi_latency_injector_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of block_design_axi_latency_injector_0_0 (xilinx.com:user:axi_latency_injector:1.0) from (Rev. 5) to (Rev. 6)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+Parameter 'C_S00_AXI_BASEADDR' is no longer present on the upgraded IP 'block_design_axi_latency_injector_0_0', and cannot be set to '0xFFFFFFFF'
+
+Parameter 'C_S00_AXI_HIGHADDR' is no longer present on the upgraded IP 'block_design_axi_latency_injector_0_0', and cannot be set to '0x00000000'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:axi_latency_injector:1.0 -user_name block_design_axi_latency_injector_0_0
+set_property -dict "\
+  CONFIG.C_ADDR_WIDTH {32} \
+  CONFIG.C_DATA_WIDTH {32} \
+  CONFIG.C_LATENCY_CYCLES {50} \
+  CONFIG.Component_Name {block_design_axi_latency_injector_0_0} \
+  CONFIG.M_AXI.ADDR_WIDTH {32} \
+  CONFIG.M_AXI.ARUSER_WIDTH {0} \
+  CONFIG.M_AXI.AWUSER_WIDTH {0} \
+  CONFIG.M_AXI.BUSER_WIDTH {0} \
+  CONFIG.M_AXI.CLK_DOMAIN {} \
+  CONFIG.M_AXI.DATA_WIDTH {32} \
+  CONFIG.M_AXI.FREQ_HZ {100000000} \
+  CONFIG.M_AXI.HAS_BRESP {1} \
+  CONFIG.M_AXI.HAS_BURST {0} \
+  CONFIG.M_AXI.HAS_CACHE {0} \
+  CONFIG.M_AXI.HAS_LOCK {0} \
+  CONFIG.M_AXI.HAS_PROT {0} \
+  CONFIG.M_AXI.HAS_QOS {0} \
+  CONFIG.M_AXI.HAS_REGION {0} \
+  CONFIG.M_AXI.HAS_RRESP {1} \
+  CONFIG.M_AXI.HAS_WSTRB {1} \
+  CONFIG.M_AXI.ID_WIDTH {0} \
+  CONFIG.M_AXI.INSERT_VIP {0} \
+  CONFIG.M_AXI.MAX_BURST_LENGTH {1} \
+  CONFIG.M_AXI.NUM_READ_OUTSTANDING {} \
+  CONFIG.M_AXI.NUM_READ_THREADS {1} \
+  CONFIG.M_AXI.NUM_WRITE_OUTSTANDING {} \
+  CONFIG.M_AXI.NUM_WRITE_THREADS {1} \
+  CONFIG.M_AXI.PHASE {0.0} \
+  CONFIG.M_AXI.PROTOCOL {AXI4LITE} \
+  CONFIG.M_AXI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.M_AXI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.M_AXI.RUSER_WIDTH {0} \
+  CONFIG.M_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.M_AXI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.M_AXI.WUSER_WIDTH {0} \
+  CONFIG.S_AXI.ADDR_WIDTH {32} \
+  CONFIG.S_AXI.ARUSER_WIDTH {0} \
+  CONFIG.S_AXI.AWUSER_WIDTH {0} \
+  CONFIG.S_AXI.BUSER_WIDTH {0} \
+  CONFIG.S_AXI.CLK_DOMAIN {} \
+  CONFIG.S_AXI.DATA_WIDTH {32} \
+  CONFIG.S_AXI.FREQ_HZ {100000000} \
+  CONFIG.S_AXI.HAS_BRESP {1} \
+  CONFIG.S_AXI.HAS_BURST {0} \
+  CONFIG.S_AXI.HAS_CACHE {0} \
+  CONFIG.S_AXI.HAS_LOCK {0} \
+  CONFIG.S_AXI.HAS_PROT {0} \
+  CONFIG.S_AXI.HAS_QOS {0} \
+  CONFIG.S_AXI.HAS_REGION {0} \
+  CONFIG.S_AXI.HAS_RRESP {1} \
+  CONFIG.S_AXI.HAS_WSTRB {1} \
+  CONFIG.S_AXI.ID_WIDTH {0} \
+  CONFIG.S_AXI.INSERT_VIP {0} \
+  CONFIG.S_AXI.MAX_BURST_LENGTH {1} \
+  CONFIG.S_AXI.NUM_READ_OUTSTANDING {} \
+  CONFIG.S_AXI.NUM_READ_THREADS {1} \
+  CONFIG.S_AXI.NUM_WRITE_OUTSTANDING {} \
+  CONFIG.S_AXI.NUM_WRITE_THREADS {1} \
+  CONFIG.S_AXI.PHASE {0.0} \
+  CONFIG.S_AXI.PROTOCOL {AXI4LITE} \
+  CONFIG.S_AXI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.S_AXI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.S_AXI.RUSER_WIDTH {0} \
+  CONFIG.S_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.S_AXI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.S_AXI.WUSER_WIDTH {0} \
+  CONFIG.aclk.ASSOCIATED_BUSIF {S_AXI:M_AXI} \
+  CONFIG.aclk.ASSOCIATED_PORT {} \
+  CONFIG.aclk.ASSOCIATED_RESET {aresetn} \
+  CONFIG.aclk.CLK_DOMAIN {} \
+  CONFIG.aclk.FREQ_HZ {100000000} \
+  CONFIG.aclk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.aclk.INSERT_VIP {0} \
+  CONFIG.aclk.PHASE {0.0} \
+  CONFIG.aresetn.INSERT_VIP {0} \
+  CONFIG.aresetn.POLARITY {ACTIVE_LOW} " [get_ips block_design_axi_latency_injector_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Mon Feb 16 10:11:26 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_axi_latency_injector_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_axi_latency_injector_0_0 (xilinx.com:user:axi_latency_injector:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Mon Feb 16 10:08:38 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_axi_latency_injector_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of block_design_axi_latency_injector_0_0 (xilinx.com:user:axi_latency_injector:1.0) from (Rev. 3) to (Rev. 4)
+
+2. Addressing Information
+-------------------------
+
+Detected addressing differences while upgrading 'block_design_axi_latency_injector_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed address block 'S_AXI/mem0'
+
+-Upgrade has added address block 'S_AXI/Mem0'
+
+-Upgrade has removed address space 'M00_AXI'
+
+-Upgrade has added address space 'M_AXI'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 14 22:11:41 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_lmb_latency_injector_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_lmb_latency_injector_0_2 (xilinx.com:user:lmb_latency_injector:1.0) from (Rev. 17) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 14 21:57:26 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_lmb_latency_injector_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_lmb_latency_injector_0_2 (xilinx.com:user:lmb_latency_injector:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 14 21:48:31 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_lmb_latency_injector_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of block_design_lmb_latency_injector_0_2 (xilinx.com:user:lmb_latency_injector:1.0) from (Rev. 15) to (Rev. 16)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+Parameter 'SLOW_BASE' is no longer present on the upgraded IP 'block_design_lmb_latency_injector_0_2', and cannot be set to '0x00010000'
+
+Parameter 'SLOW_HIGH' is no longer present on the upgraded IP 'block_design_lmb_latency_injector_0_2', and cannot be set to '0x0001FFFF'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:lmb_latency_injector:1.0 -user_name block_design_lmb_latency_injector_0_2
+set_property -dict "\
+  CONFIG.Component_Name {block_design_lmb_latency_injector_0_2} \
+  CONFIG.LATENCY_CYCLES {200} \
+  CONFIG.LMB_Clk.ASSOCIATED_BUSIF {S_LMB} \
+  CONFIG.LMB_Clk.ASSOCIATED_PORT {} \
+  CONFIG.LMB_Clk.ASSOCIATED_RESET {LMB_Rst} \
+  CONFIG.LMB_Clk.CLK_DOMAIN {/clk_wiz_1_clk_out1} \
+  CONFIG.LMB_Clk.FREQ_HZ {100000000} \
+  CONFIG.LMB_Clk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.LMB_Clk.INSERT_VIP {0} \
+  CONFIG.LMB_Clk.PHASE {0.0} \
+  CONFIG.LMB_Rst.INSERT_VIP {0} \
+  CONFIG.LMB_Rst.POLARITY {ACTIVE_HIGH} \
+  CONFIG.M_LMB.ADDR_WIDTH {32} \
+  CONFIG.M_LMB.DATA_WIDTH {32} \
+  CONFIG.M_LMB.PROTOCOL {STANDARD} \
+  CONFIG.M_LMB.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.S_LMB.ADDR_WIDTH {32} \
+  CONFIG.S_LMB.DATA_WIDTH {32} \
+  CONFIG.S_LMB.PROTOCOL {STANDARD} \
+  CONFIG.S_LMB.READ_WRITE_MODE {READ_WRITE} " [get_ips block_design_lmb_latency_injector_0_2]
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 14 21:35:43 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_lmb_latency_injector_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_lmb_latency_injector_0_2 (xilinx.com:user:lmb_latency_injector:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 14 21:25:00 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_lmb_latency_injector_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_lmb_latency_injector_0_2 (xilinx.com:user:lmb_latency_injector:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 14 21:17:24 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_lmb_latency_injector_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_lmb_latency_injector_0_2 (xilinx.com:user:lmb_latency_injector:1.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 14 20:58:57 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_lmb_latency_injector_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of block_design_lmb_latency_injector_0_2 (xilinx.com:user:lmb_latency_injector:1.0) from (Rev. 11) to (Rev. 12)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+Parameter 'SLOW_BASE' is no longer present on the upgraded IP 'block_design_lmb_latency_injector_0_2', and cannot be set to '0x00010000'
+
+Parameter 'SLOW_HIGH' is no longer present on the upgraded IP 'block_design_lmb_latency_injector_0_2', and cannot be set to '0x0001FFFF'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:lmb_latency_injector:1.0 -user_name block_design_lmb_latency_injector_0_2
+set_property -dict "\
+  CONFIG.Component_Name {block_design_lmb_latency_injector_0_2} \
+  CONFIG.LATENCY_CYCLES {100} \
+  CONFIG.LMB_Clk.ASSOCIATED_BUSIF {S_LMB} \
+  CONFIG.LMB_Clk.ASSOCIATED_PORT {} \
+  CONFIG.LMB_Clk.ASSOCIATED_RESET {LMB_Rst} \
+  CONFIG.LMB_Clk.CLK_DOMAIN {/clk_wiz_1_clk_out1} \
+  CONFIG.LMB_Clk.FREQ_HZ {100000000} \
+  CONFIG.LMB_Clk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.LMB_Clk.INSERT_VIP {0} \
+  CONFIG.LMB_Clk.PHASE {0.0} \
+  CONFIG.LMB_Rst.INSERT_VIP {0} \
+  CONFIG.LMB_Rst.POLARITY {ACTIVE_HIGH} \
+  CONFIG.M_LMB.ADDR_WIDTH {32} \
+  CONFIG.M_LMB.DATA_WIDTH {32} \
+  CONFIG.M_LMB.PROTOCOL {STANDARD} \
+  CONFIG.M_LMB.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.S_LMB.ADDR_WIDTH {32} \
+  CONFIG.S_LMB.DATA_WIDTH {32} \
+  CONFIG.S_LMB.PROTOCOL {STANDARD} \
+  CONFIG.S_LMB.READ_WRITE_MODE {READ_WRITE} " [get_ips block_design_lmb_latency_injector_0_2]
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 14 20:54:11 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_lmb_latency_injector_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_lmb_latency_injector_0_2 (xilinx.com:user:lmb_latency_injector:1.0) from (Rev. 9) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 14 20:23:16 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_lmb_latency_injector_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_lmb_latency_injector_0_2 (xilinx.com:user:lmb_latency_injector:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 14 20:15:17 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_lmb_latency_injector_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_lmb_latency_injector_0_2 (xilinx.com:user:lmb_latency_injector:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 14 20:07:01 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_lmb_latency_injector_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_lmb_latency_injector_0_2 (xilinx.com:user:lmb_latency_injector:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 14 19:38:31 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_lmb_latency_injector_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of block_design_lmb_latency_injector_0_2 (xilinx.com:user:lmb_latency_injector:1.0) from (Rev. 5) to (Rev. 6)
+
+2. Addressing Information
+-------------------------
+
+Detected addressing differences while upgrading 'block_design_lmb_latency_injector_0_2'. These changes may impact your design.
+
+
+-Upgrade has added address block 'S_LMB_MEM/mem0'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Feb 14 19:33:53 2026
+| Host         : Thomas_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_lmb_latency_injector_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_lmb_latency_injector_0_2 (xilinx.com:user:lmb_latency_injector:1.0) from (Rev. 3) to (Rev. 5)
+

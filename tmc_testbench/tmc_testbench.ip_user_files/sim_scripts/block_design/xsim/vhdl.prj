@@ -1,0 +1,18 @@
+vhdl xil_defaultlib  \
+"../../../bd/block_design/ip/block_design_axi_uartlite_0_1/sim/block_design_axi_uartlite_0_1.vhd" \
+"../../../bd/block_design/ip/block_design_axi_timer_0_0/sim/block_design_axi_timer_0_0.vhd" \
+"../../../bd/block_design/ip/block_design_microblaze_0_3/sim/block_design_microblaze_0_3.vhd" \
+"../../../bd/block_design/ip/block_design_dlmb_v10_7/sim/block_design_dlmb_v10_7.vhd" \
+"../../../bd/block_design/ip/block_design_ilmb_v10_7/sim/block_design_ilmb_v10_7.vhd" \
+"../../../bd/block_design/ip/block_design_dlmb_bram_if_cntlr_7/sim/block_design_dlmb_bram_if_cntlr_7.vhd" \
+"../../../bd/block_design/ip/block_design_ilmb_bram_if_cntlr_7/sim/block_design_ilmb_bram_if_cntlr_7.vhd" \
+"../../../bd/block_design/ip/block_design_lmb_v10_2/sim/block_design_lmb_v10_2.vhd" \
+"../../../bd/block_design/ip/block_design_mdm_1_6/sim/block_design_mdm_1_6.vhd" \
+"../../../bd/block_design/ip/block_design_rst_clk_wiz_1_100M_4/sim/block_design_rst_clk_wiz_1_100M_4.vhd" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_1/sim/bd_70a8_psr_aclk_0.vhd" \
+"../../../bd/block_design/ip/block_design_axi_bram_ctrl_0_0/sim/block_design_axi_bram_ctrl_0_0.vhd" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_1/sim/bd_2da4_psr_aclk_0.vhd" \
+"../../../bd/block_design/ip/block_design_axi_bram_ctrl_1_0/sim/block_design_axi_bram_ctrl_1_0.vhd" \
+
+# Do not sort compile order
+nosort

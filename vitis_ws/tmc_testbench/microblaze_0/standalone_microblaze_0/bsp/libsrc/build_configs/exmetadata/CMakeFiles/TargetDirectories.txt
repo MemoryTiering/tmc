@@ -1,0 +1,5 @@
+C:/Users/twpin/prj/fpga/mms/tmc/vitis_ws/tmc_testbench/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/exmetadata/CMakeFiles/bram_example.dir
+C:/Users/twpin/prj/fpga/mms/tmc/vitis_ws/tmc_testbench/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/exmetadata/CMakeFiles/tmrctr_example.dir
+C:/Users/twpin/prj/fpga/mms/tmc/vitis_ws/tmc_testbench/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/exmetadata/CMakeFiles/uartlite_example.dir
+C:/Users/twpin/prj/fpga/mms/tmc/vitis_ws/tmc_testbench/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/exmetadata/CMakeFiles/edit_cache.dir
+C:/Users/twpin/prj/fpga/mms/tmc/vitis_ws/tmc_testbench/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/exmetadata/CMakeFiles/rebuild_cache.dir

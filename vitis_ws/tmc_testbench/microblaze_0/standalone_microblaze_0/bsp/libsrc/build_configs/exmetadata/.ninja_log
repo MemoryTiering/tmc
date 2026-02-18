@@ -1,0 +1,13 @@
+# ninja log v5
+27	1009	0	CMakeFiles/tmrctr_example	254a616889dae2ab
+27	1009	0	xtmrctr_exlist.yaml	254a616889dae2ab
+27	1009	0	C:/Users/twpin/prj/fpga/mms/tmc/vitis_ws/tmc_testbench/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/exmetadata/CMakeFiles/tmrctr_example	254a616889dae2ab
+27	1009	0	C:/Users/twpin/prj/fpga/mms/tmc/vitis_ws/tmc_testbench/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/exmetadata/xtmrctr_exlist.yaml	254a616889dae2ab
+5	1044	0	CMakeFiles/bram_example	4b22eeabe33f1b17
+5	1044	0	xbram_exlist.yaml	4b22eeabe33f1b17
+5	1044	0	C:/Users/twpin/prj/fpga/mms/tmc/vitis_ws/tmc_testbench/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/exmetadata/CMakeFiles/bram_example	4b22eeabe33f1b17
+5	1044	0	C:/Users/twpin/prj/fpga/mms/tmc/vitis_ws/tmc_testbench/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/exmetadata/xbram_exlist.yaml	4b22eeabe33f1b17
+42	1062	0	CMakeFiles/uartlite_example	93841a323a6f7c1e
+42	1062	0	xuartlite_exlist.yaml	93841a323a6f7c1e
+42	1062	0	C:/Users/twpin/prj/fpga/mms/tmc/vitis_ws/tmc_testbench/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/exmetadata/CMakeFiles/uartlite_example	93841a323a6f7c1e
+42	1062	0	C:/Users/twpin/prj/fpga/mms/tmc/vitis_ws/tmc_testbench/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/exmetadata/xuartlite_exlist.yaml	93841a323a6f7c1e
