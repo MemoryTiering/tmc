@@ -1,0 +1,772 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Mar  3 17:34:10 2026
+# Process ID         : 1916
+# Current directory  : C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.runs/axi_datamover_0_synth_1
+# Command line       : vivado.exe -log axi_datamover_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi_datamover_0.tcl
+# Log file           : C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.runs/axi_datamover_0_synth_1/axi_datamover_0.vds
+# Journal file       : C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.runs/axi_datamover_0_synth_1\vivado.jou
+# Running On         : Dono_Compact
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 5800X3D 8-Core Processor           
+# CPU Frequency      : 3394 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34280 MB
+# Swap memory        : 2684 MB
+# Total Virtual      : 36965 MB
+# Available Virtual  : 15706 MB
+#-----------------------------------------------------------
+source axi_datamover_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 526.812 ; gain = 220.180
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Donov/Projects/tmc/ip_repo/axi_latency_injector_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.srcs/sources_1/new'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
+Command: synth_design -top axi_datamover_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10920
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1286.371 ; gain = 540.773
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_0' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/synth/axi_datamover_0.vhd:133]
+	Parameter C_INCLUDE_MM2S bound to: 1 - type: integer 
+	Parameter C_M_AXI_MM2S_ARID bound to: 0 - type: integer 
+	Parameter C_M_AXI_MM2S_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_MM2S_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_MM2S_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_MM2S_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_INCLUDE_MM2S_STSFIFO bound to: 1 - type: integer 
+	Parameter C_MM2S_STSCMD_FIFO_DEPTH bound to: 4 - type: integer 
+	Parameter C_MM2S_STSCMD_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_INCLUDE_MM2S_DRE bound to: 0 - type: integer 
+	Parameter C_MM2S_BURST_SIZE bound to: 16 - type: integer 
+	Parameter C_MM2S_BTT_USED bound to: 16 - type: integer 
+	Parameter C_MM2S_ADDR_PIPE_DEPTH bound to: 3 - type: integer 
+	Parameter C_INCLUDE_S2MM bound to: 1 - type: integer 
+	Parameter C_M_AXI_S2MM_AWID bound to: 0 - type: integer 
+	Parameter C_M_AXI_S2MM_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_S2MM_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_S2MM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_S2MM_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_INCLUDE_S2MM_STSFIFO bound to: 1 - type: integer 
+	Parameter C_S2MM_STSCMD_FIFO_DEPTH bound to: 4 - type: integer 
+	Parameter C_S2MM_STSCMD_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_INCLUDE_S2MM_DRE bound to: 0 - type: integer 
+	Parameter C_S2MM_BURST_SIZE bound to: 32 - type: integer 
+	Parameter C_S2MM_BTT_USED bound to: 16 - type: integer 
+	Parameter C_S2MM_SUPPORT_INDET_BTT bound to: 0 - type: integer 
+	Parameter C_S2MM_ADDR_PIPE_DEPTH bound to: 4 - type: integer 
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_MM2S_INCLUDE_SF bound to: 1 - type: integer 
+	Parameter C_S2MM_INCLUDE_SF bound to: 1 - type: integer 
+	Parameter C_ENABLE_CACHE_USER bound to: 0 - type: integer 
+	Parameter C_ENABLE_MM2S_TKEEP bound to: 1 - type: integer 
+	Parameter C_ENABLE_S2MM_TKEEP bound to: 1 - type: integer 
+	Parameter C_ENABLE_SKID_BUF bound to: 11111 - type: string 
+	Parameter C_ENABLE_S2MM_ADV_SIG bound to: 0 - type: integer 
+	Parameter C_ENABLE_MM2S_ADV_SIG bound to: 0 - type: integer 
+	Parameter C_CMD_WIDTH bound to: 72 - type: integer 
+INFO: [Synth 8-3491] module 'axi_datamover' declared at 'c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:54982' bound to instance 'U0' of component 'axi_datamover' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/synth/axi_datamover_0.vhd:377]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:55430]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_full_wrap' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:53569]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_reset' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_reset' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2913]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized0' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo__parameterized0' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo__parameterized0' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized0' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2913]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_status_cntl' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:13919]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_status_cntl' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:13919]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:7613]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized0' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized0' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
+INFO: [Synth 8-226] default block is never used [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:9687]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:7613]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:10191]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized1' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo__parameterized1' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo__parameterized1' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:10191]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rddata_cntl' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:12364]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rdmux' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:10866]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rdmux' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:10866]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo__parameterized2' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo__parameterized2' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rddata_cntl' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:12364]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_sf' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:20342]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 128 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 39 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_DATA_WIDTH bound to: 39 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at 'C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975' bound to instance 'I_SYNC_FIFOGEN_FIFO' of component 'xpm_fifo_sync' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1498]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-226] default block is never used [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_sf' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:20342]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:19643]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:19643]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_full_wrap' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:53569]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_full_wrap' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:50012]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_status_cntl' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:17859]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo__parameterized3' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo__parameterized3' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized3' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized4' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo__parameterized4' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo__parameterized4' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized4' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_status_cntl' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:17859]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc__parameterized0' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:7613]
+INFO: [Synth 8-226] default block is never used [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:9687]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc__parameterized0' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:7613]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_realign' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:47044]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized5' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo__parameterized5' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo__parameterized5' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized5' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_scatter' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:45156]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mssai_skid_buf' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:44213]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_ms_strb_set' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:42655]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ms_strb_set' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:42655]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mssai_skid_buf' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:44213]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_slice' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:44901]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_slice' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:44901]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized6' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo__parameterized6' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo__parameterized6' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized6' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_scatter' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:45156]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_realign' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:47044]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_sf' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:22235]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameterized0' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 256 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 34 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_DATA_WIDTH bound to: 34 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 9 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 9 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at 'C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975' bound to instance 'I_SYNC_FIFOGEN_FIFO' of component 'xpm_fifo_sync' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1498]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized1' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized4' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized4' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized5' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized5' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-226] default block is never used [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized6' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized6' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized7' [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized7' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized1' (0#1) [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord__parameterized0' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo__parameterized7' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo__parameterized7' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_sf' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:22235]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl__parameterized0' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:10191]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized7' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo__parameterized8' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo__parameterized8' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized7' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl__parameterized0' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:10191]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wrdata_cntl' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:15835]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wrdata_cntl' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:15835]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid2mm_buf' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:19147]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_demux' [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:14284]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_demux' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:14284]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid2mm_buf' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:19147]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_full_wrap' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:50012]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:55430]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_0' (0#1) [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/synth/axi_datamover_0.vhd:133]
+INFO: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:8245]
+INFO: [Synth 8-6014] Unused sequential element sig_xfer_reg_full_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:8556]
+INFO: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:10601]
+INFO: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:10608]
+INFO: [Synth 8-6014] Unused sequential element sig_next_dre_src_align_reg_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:13065]
+INFO: [Synth 8-6014] Unused sequential element sig_next_dre_dest_align_reg_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:13066]
+INFO: [Synth 8-6014] Unused sequential element sig_coelsc_reg_empty_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:13404]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
+WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.ram_aempty_i_reg was removed.  [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:982]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+INFO: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1586]
+INFO: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:8245]
+INFO: [Synth 8-6014] Unused sequential element sig_xfer_reg_full_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:8556]
+INFO: [Synth 8-6014] Unused sequential element sig_sm_ld_scatter_cmd_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:47543]
+INFO: [Synth 8-6014] Unused sequential element sig_sm_pop_cmd_fifo_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:47359]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
+WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.ram_aempty_i_reg was removed.  [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:982]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+INFO: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:1586]
+INFO: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:10601]
+INFO: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:10608]
+INFO: [Synth 8-6014] Unused sequential element sig_next_eof_reg_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:17131]
+INFO: [Synth 8-6014] Unused sequential element sig_single_dbeat_reg was removed.  [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/hdl/axi_datamover_v5_1_vh_rfs.vhd:17389]
+INFO: [Synth 8-7129] Port debeat_saddr_lsb[1] in module axi_datamover_wr_demux is either unconnected or has no load
+INFO: [Synth 8-7129] Port debeat_saddr_lsb[0] in module axi_datamover_wr_demux is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_strm_wstrb[3] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_strm_wstrb[2] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_strm_wstrb[1] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_strm_wstrb[0] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_strm_wlast in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_strm_eop in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_stbs_asserted[7] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_stbs_asserted[6] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_stbs_asserted[5] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_stbs_asserted[4] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_stbs_asserted[3] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_stbs_asserted[2] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_stbs_asserted[1] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port s2mm_stbs_asserted[0] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data2addr_data_rdy in module axi_datamover_addr_cntl__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port rd_clk in module xpm_fifo_rst is either unconnected or has no load
+INFO: [Synth 8-7129] Port sleep in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port rsta in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port regcea in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port clkb in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[33] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[32] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[31] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[30] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[29] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[28] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[27] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[26] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[25] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[24] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[23] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[22] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[21] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[20] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[19] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[18] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[17] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[16] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[15] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[14] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[13] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[12] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[11] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[10] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[9] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[8] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[7] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[6] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[5] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[4] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[3] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[2] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[1] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[0] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SFIFO_Clr_Rd_Data_Valid in module axi_datamover_sfifo_autord__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port sin2sf_tkeep[3] in module axi_datamover_wr_sf is either unconnected or has no load
+INFO: [Synth 8-7129] Port sin2sf_tkeep[2] in module axi_datamover_wr_sf is either unconnected or has no load
+INFO: [Synth 8-7129] Port sin2sf_tkeep[1] in module axi_datamover_wr_sf is either unconnected or has no load
+INFO: [Synth 8-7129] Port sin2sf_tkeep[0] in module axi_datamover_wr_sf is either unconnected or has no load
+INFO: [Synth 8-7129] Port sin2sf_strt_addr_offset[0] in module axi_datamover_wr_sf is either unconnected or has no load
+INFO: [Synth 8-7129] Port wr_xfer_cmplt in module axi_datamover_wr_sf is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized6 is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized6 is either unconnected or has no load
+INFO: [Synth 8-7129] Port end_addr_offset[1] in module axi_datamover_strb_gen2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port end_addr_offset[0] in module axi_datamover_strb_gen2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port num_valid_bytes[1] in module axi_datamover_strb_gen2__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port num_valid_bytes[0] in module axi_datamover_strb_gen2__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port cmd2mstr_command[22] in module axi_datamover_pcc__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port cmd2mstr_command[21] in module axi_datamover_pcc__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port cmd2mstr_command[20] in module axi_datamover_pcc__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port cmd2mstr_command[19] in module axi_datamover_pcc__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port cmd2mstr_command[18] in module axi_datamover_pcc__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port cmd2mstr_command[17] in module axi_datamover_pcc__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port cmd2mstr_command[16] in module axi_datamover_pcc__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port calc2wsc_calc_error in module axi_datamover_wr_status_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port addr2wsc_fifo_empty in module axi_datamover_wr_status_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port data2wsc_eop in module axi_datamover_wr_status_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port data2wsc_bytes_rcvd[15] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port data2wsc_bytes_rcvd[14] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port data2wsc_bytes_rcvd[13] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port data2wsc_bytes_rcvd[12] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port data2wsc_bytes_rcvd[11] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port data2wsc_bytes_rcvd[10] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port data2wsc_bytes_rcvd[9] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port data2wsc_bytes_rcvd[8] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port data2wsc_bytes_rcvd[7] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1460.852 ; gain = 715.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1460.852 ; gain = 715.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1460.852 ; gain = 715.254
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1460.852 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/axi_datamover_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/axi_datamover_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/axi_datamover_0.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/axi_datamover_0.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.runs/axi_datamover_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.runs/axi_datamover_0_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/axi_datamover_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/ip/axi_datamover_0/axi_datamover_0_clocks.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/axi_datamover_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/axi_datamover_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 2 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1533.914 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 1533.914 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1533.914 ; gain = 788.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1533.914 ; gain = 788.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1533.914 ; gain = 788.316
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'sig_pcc_sm_state_reg' in module 'axi_datamover_pcc'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-802] inferred FSM for state register 'sig_pcc_sm_state_reg' in module 'axi_datamover_pcc__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'sig_cmdcntl_sm_state_reg' in module 'axi_datamover_s2mm_realign'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                         00000001 |                              000
+            wait_for_cmd |                         00000010 |                              001
+                  calc_1 |                         00000100 |                              010
+                  calc_2 |                         00001000 |                              011
+                  calc_3 |                         00010000 |                              100
+       wait_on_xfer_push |                         00100000 |                              101
+             chk_if_done |                         01000000 |                              110
+              error_trap |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_pcc_sm_state_reg' using encoding 'one-hot' in module 'axi_datamover_pcc'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                         00000001 |                              000
+            wait_for_cmd |                         00000010 |                              001
+                  calc_1 |                         00000100 |                              010
+                  calc_2 |                         00001000 |                              011
+                  calc_3 |                         00010000 |                              100
+       wait_on_xfer_push |                         00100000 |                              101
+             chk_if_done |                         01000000 |                              110
+              error_trap |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_pcc_sm_state_reg' using encoding 'one-hot' in module 'axi_datamover_pcc__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                              000 |                              000
+    ld_dre_scatter_first |                              001 |                              001
+           chk_pop_first |                              010 |                              010
+   ld_dre_scatter_second |                              011 |                              011
+              error_trap |                              100 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_cmdcntl_sm_state_reg' using encoding 'sequential' in module 'axi_datamover_s2mm_realign'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1533.914 ; gain = 788.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 4     
+	   3 Input   16 Bit       Adders := 1     
+	   4 Input    9 Bit       Adders := 4     
+	   2 Input    9 Bit       Adders := 3     
+	   3 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 5     
+	   4 Input    8 Bit       Adders := 9     
+	   3 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 2     
+	   4 Input    7 Bit       Adders := 5     
+	   3 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 10    
+	   2 Input    3 Bit       Adders := 26    
+	   3 Input    3 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 6     
+	   4 Input    2 Bit       Adders := 2     
++---Registers : 
+	               39 Bit    Registers := 2     
+	               34 Bit    Registers := 2     
+	               32 Bit    Registers := 12    
+	               16 Bit    Registers := 15    
+	                9 Bit    Registers := 7     
+	                8 Bit    Registers := 16    
+	                7 Bit    Registers := 6     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 41    
+	                3 Bit    Registers := 18    
+	                2 Bit    Registers := 17    
+	                1 Bit    Registers := 303   
++---RAMs : 
+	               8K Bit	(256 X 34 bit)          RAMs := 1     
+	               4K Bit	(128 X 39 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 8     
+	   2 Input   16 Bit        Muxes := 8     
+	   4 Input   16 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 3     
+	   8 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 11    
+	   2 Input    5 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 31    
+	   4 Input    4 Bit        Muxes := 10    
+	   2 Input    3 Bit        Muxes := 27    
+	   3 Input    3 Bit        Muxes := 3     
+	   5 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 73    
+	   4 Input    2 Bit        Muxes := 14    
+	   2 Input    1 Bit        Muxes := 86    
+	   8 Input    1 Bit        Muxes := 6     
+	   4 Input    1 Bit        Muxes := 4     
+	   3 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5784] Optimized 1 bits of RAM "gen_wr_a.gen_word_narrow.mem_reg" due to constant propagation. Old ram width 39 bits, new ram width 38 bits.
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1533.914 ; gain = 788.316
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                                                                                                        | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|U0/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst     | gen_wr_a.gen_word_narrow.mem_reg | 128 x 39(NO_CHANGE)    | W |   | 128 x 39(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|U0/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_GP_SF.I_S2MM_GP_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 256 x 34(NO_CHANGE)    | W |   | 256 x 34(NO_CHANGE)    |   | R | Port A and B     | 1      | 0      | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1639.176 ; gain = 893.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1698.738 ; gain = 953.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                                                                                                        | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|U0/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst     | gen_wr_a.gen_word_narrow.mem_reg | 128 x 39(NO_CHANGE)    | W |   | 128 x 39(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|U0/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_GP_SF.I_S2MM_GP_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 256 x 34(NO_CHANGE)    | W |   | 256 x 34(NO_CHANGE)    |   | R | Port A and B     | 1      | 0      | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1714.805 ; gain = 969.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1925.785 ; gain = 1180.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1925.785 ; gain = 1180.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1925.785 ; gain = 1180.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1925.785 ; gain = 1180.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1928.746 ; gain = 1183.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1928.746 ; gain = 1183.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+--------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name     | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+--------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | data_reg[3]  | 68     | 68         | 68     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | data_reg[3]  | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__2     | data_reg[2]  | 59     | 59         | 59     | 0       | 0      | 0      | 0      | 
+|dsrl__3     | data_reg[2]  | 29     | 29         | 29     | 0       | 0      | 0      | 0      | 
+|dsrl__4     | data_reg[5]  | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__5     | data_reg[5]  | 7      | 7          | 7      | 0       | 0      | 0      | 0      | 
+|dsrl__6     | data_reg[3]  | 27     | 27         | 27     | 0       | 0      | 0      | 0      | 
+|dsrl__7     | data_reg[15] | 9      | 9          | 9      | 0       | 0      | 0      | 0      | 
+|dsrl__8     | data_reg[7]  | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__9     | data_reg[3]  | 59     | 59         | 59     | 0       | 0      | 0      | 0      | 
++------------+--------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    39|
+|2     |LUT1     |    18|
+|3     |LUT2     |   101|
+|4     |LUT3     |   290|
+|5     |LUT4     |   195|
+|6     |LUT5     |   189|
+|7     |LUT6     |   264|
+|8     |RAMB18E1 |     1|
+|9     |RAMB36E1 |     1|
+|10    |SRL16E   |   281|
+|11    |FDRE     |  1038|
+|12    |FDSE     |    84|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1928.746 ; gain = 1183.148
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1928.746 ; gain = 1110.086
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1928.746 ; gain = 1183.148
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1937.957 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1941.621 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 1216bc54
+INFO: [Common 17-83] Releasing license: Synthesis
+320 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1941.621 ; gain = 1401.625
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1941.621 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.runs/axi_datamover_0_synth_1/axi_datamover_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP axi_datamover_0, cache-ID = f7f1fc48d54b0c2b
+INFO: [Coretcl 2-1174] Renamed 74 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1941.621 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.runs/axi_datamover_0_synth_1/axi_datamover_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file axi_datamover_0_utilization_synth.rpt -pb axi_datamover_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  3 17:35:01 2026...

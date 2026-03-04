@@ -1,0 +1,2 @@
+axi_datamover_0.vhd,vhdl,xil_defaultlib,../../../../tmc_testbench.gen/sources_1/ip/axi_datamover_0/sim/axi_datamover_0.vhd,incdir="../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

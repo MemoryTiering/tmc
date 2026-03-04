@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt 2  -L xil_defaultlib -L axi_datamover_v5_1_37 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot axi_datamover_0 xil_defaultlib.axi_datamover_0 xil_defaultlib.glbl -log elaborate.log
