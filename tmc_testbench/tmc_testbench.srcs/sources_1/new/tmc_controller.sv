@@ -11,7 +11,9 @@ module tmc_controller #(
     parameter int BLOCK_BYTES                     = 256,
     parameter int TIER0_BYTES                     = 65536,
     parameter int TIER1_BYTES                     = 65536,
-    parameter bit SCRATCH_DEFAULT_IN_FAR          = 1'b1
+    parameter bit SCRATCH_DEFAULT_IN_FAR          = 1'b1,
+    parameter bit AUTO_SWAP_DEFAULT               = 1'b1,
+    parameter bit STRICT_STALL_DEFAULT            = 1'b0
 )(
     input  logic                               aclk,
     input  logic                               aresetn,
@@ -95,6 +97,9 @@ module tmc_controller #(
     localparam logic [31:0] CTRL_LAST_VICTIM_ADDR= CTRL_BASE_ADDR + 32'h0020;
     localparam logic [31:0] CTRL_PROMOTE_ADDR    = CTRL_BASE_ADDR + 32'h0024;
     localparam logic [31:0] CTRL_DEMOTE_ADDR     = CTRL_BASE_ADDR + 32'h0028;
+    localparam logic [31:0] REG_CTRL_RESET_VALUE = (AUTO_SWAP_DEFAULT << 0) |
+                                                    (SCRATCH_DEFAULT_IN_FAR << 8);
+    localparam logic [31:0] REG_MODE_RESET_VALUE = (STRICT_STALL_DEFAULT << 1);
 
     typedef enum logic [1:0] { WR_IDLE, WR_ISSUE_AXI, WR_WAIT_B } wr_state_t;
     typedef enum logic [1:0] { RD_IDLE, RD_ISSUE_AXI, RD_WAIT_R } rd_state_t;
@@ -307,8 +312,8 @@ module tmc_controller #(
             wr_was_logical <= 1'b0;
             rd_was_logical <= 1'b0;
 
-            reg_ctrl <= 32'h0;
-            reg_mode <= 32'h0;
+            reg_ctrl <= REG_CTRL_RESET_VALUE;
+            reg_mode <= REG_MODE_RESET_VALUE;
             reg_manual_mm2s_cmd <= '0;
             reg_manual_s2mm_cmd <= '0;
             reg_promote_count <= '0;
