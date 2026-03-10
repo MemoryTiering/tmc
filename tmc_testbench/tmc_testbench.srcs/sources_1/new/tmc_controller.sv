@@ -202,10 +202,20 @@ module tmc_controller #(
     );
         logic [71:0] cmd;
         begin
+            // AXI DataMover command format (72-bit):
+            // [22:0]   BTT
+            // [23]     TYPE (0=incrementing)
+            // [29:24]  DSA
+            // [30]     EOF
+            // [31]     DRR
+            // [63:32]  Address
+            // [67:64]  TAG
+            // [71:68]  Reserved
             cmd = '0;
-            cmd[31:0] = src_addr;
-            cmd[54:32] = btt;
-            cmd[55] = 1'b1;
+            cmd[22:0]  = btt;
+            cmd[23]    = 1'b1;      // Type=INCR (required for linear block transfers)
+            cmd[30]    = 1'b1;      // EOF for one command per 256B transfer
+            cmd[63:32] = src_addr;
             mk_datamover_cmd = cmd;
         end
     endfunction

@@ -440,11 +440,11 @@ module tmc_controller_tb;
 
             if (M_AXIS_MM2S_CMD_TVALID && M_AXIS_MM2S_CMD_TREADY) begin
                 mm2s_cmd_seen <= 1'b1;
-                mm2s_cmd_addr <= M_AXIS_MM2S_CMD_TDATA[31:0];
+                mm2s_cmd_addr <= M_AXIS_MM2S_CMD_TDATA[63:32];
             end
             if (M_AXIS_S2MM_CMD_TVALID && M_AXIS_S2MM_CMD_TREADY) begin
                 s2mm_cmd_seen <= 1'b1;
-                s2mm_cmd_addr <= M_AXIS_S2MM_CMD_TDATA[31:0];
+                s2mm_cmd_addr <= M_AXIS_S2MM_CMD_TDATA[63:32];
             end
 
             if (mm2s_cmd_seen && s2mm_cmd_seen) begin
