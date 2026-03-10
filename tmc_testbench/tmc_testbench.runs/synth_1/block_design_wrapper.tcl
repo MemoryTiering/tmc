@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.runs/synth_1/block_design_wrapper.tcl"
+  variable script "C:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.runs/synth_1/block_design_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -57,8 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
-set_param bd.open.in_stealth_mode 2
-set_msg_config -id {HDL-1065} -limit 10000
+set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -66,103 +65,149 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.cache/wt [current_project]
-set_property parent.project_path C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.cache/wt [current_project]
+set_property parent.project_path C:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property board_part_repo_paths {C:/AMDDesignTools/Digilent/vivado-boards-master} [current_project]
+set_property board_part digilentinc.com:nexys-a7-100t:part0:1.3 [current_project]
 set_property ip_repo_paths {
-  c:/Users/Donov/Projects/tmc/ip_repo/axi_latency_injector_1_0
-  c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.srcs/sources_1/new
+  c:/Users/twpin/prj/fpga/mms/tmc/ip_repo/axi_latency_injector_1_0
+  c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.srcs/sources_1/new
 } [current_project]
 update_ip_catalog
-set_property ip_output_repo c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.cache/ip [current_project]
+set_property ip_output_repo c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib -sv C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.srcs/sources_1/new/tmc_controller.sv
+read_verilog -library xil_defaultlib -sv C:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.srcs/sources_1/new/tmc_controller.sv
 read_verilog -library xil_defaultlib {
-  C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.srcs/sources_1/new/tmc_controller_wrapper.v
-  C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/hdl/block_design_wrapper.v
+  C:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.srcs/sources_1/new/tmc_controller_wrapper.v
+  C:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/hdl/block_design_wrapper.v
 }
-add_files C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.srcs/sources_1/bd/block_design/block_design.bd
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_uartlite_0_1/block_design_axi_uartlite_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_uartlite_0_1/block_design_axi_uartlite_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_clk_wiz_1_3/block_design_clk_wiz_1_3_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_clk_wiz_1_3/block_design_clk_wiz_1_3.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_clk_wiz_1_3/block_design_clk_wiz_1_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_timer_0_0/block_design_axi_timer_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_microblaze_0_3/block_design_microblaze_0_3.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_microblaze_0_3/block_design_microblaze_0_3_ooc_debug.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_lmb_bram_7/block_design_lmb_bram_7_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_mdm_1_6/block_design_mdm_1_6.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_mdm_1_6/block_design_mdm_1_6_ooc_trace.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_rst_clk_wiz_1_100M_4/block_design_rst_clk_wiz_1_100M_4_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_1/bd_70a8_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_2/bd_70a8_arinsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_3/bd_70a8_rinsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_4/bd_70a8_awinsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_5/bd_70a8_winsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_6/bd_70a8_binsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_7/bd_70a8_aroutsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_8/bd_70a8_routsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_9/bd_70a8_awoutsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_10/bd_70a8_woutsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_11/bd_70a8_boutsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_12/bd_70a8_arni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_13/bd_70a8_rni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_14/bd_70a8_awni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_15/bd_70a8_wni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_16/bd_70a8_bni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_20/bd_70a8_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_21/bd_70a8_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_22/bd_70a8_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_23/bd_70a8_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_24/bd_70a8_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_25/bd_70a8_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_29/bd_70a8_s01a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_30/bd_70a8_sarn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_31/bd_70a8_srn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_32/bd_70a8_sawn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_33/bd_70a8_swn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_34/bd_70a8_sbn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_35/bd_70a8_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_36/bd_70a8_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_37/bd_70a8_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_38/bd_70a8_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_39/bd_70a8_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_40/bd_70a8_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_42/bd_70a8_m01s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_43/bd_70a8_m01arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_44/bd_70a8_m01rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_45/bd_70a8_m01awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_46/bd_70a8_m01wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_47/bd_70a8_m01bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_49/bd_70a8_m02s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_50/bd_70a8_m02arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_51/bd_70a8_m02rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_52/bd_70a8_m02awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_53/bd_70a8_m02wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_54/bd_70a8_m02bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_56/bd_70a8_m03s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_57/bd_70a8_m03arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_58/bd_70a8_m03rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_59/bd_70a8_m03awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_60/bd_70a8_m03wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_61/bd_70a8_m03bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/smartconnect.xdc]
-set_property used_in_synthesis false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_system_ila_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_system_ila_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_system_ila_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_system_ila_1/bd_0/ip/ip_0/bd_e8a5_ila_lib_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_system_ila_1/bd_0/bd_e8a5_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_system_ila_1/block_design_system_ila_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/smartconnect.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_bram_ctrl_0_bram_0/block_design_axi_bram_ctrl_0_bram_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_bram_ctrl_1_bram_0/block_design_axi_bram_ctrl_1_bram_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_microblaze_0_3/data/mb_bootloop_le.elf]
+add_files C:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.srcs/sources_1/bd/block_design/block_design.bd
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_uartlite_0_1/block_design_axi_uartlite_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_uartlite_0_1/block_design_axi_uartlite_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_clk_wiz_1_3/block_design_clk_wiz_1_3_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_clk_wiz_1_3/block_design_clk_wiz_1_3.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_clk_wiz_1_3/block_design_clk_wiz_1_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_timer_0_0/block_design_axi_timer_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_microblaze_0_3/block_design_microblaze_0_3.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_microblaze_0_3/block_design_microblaze_0_3_ooc_debug.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_lmb_bram_7/block_design_lmb_bram_7_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_mdm_1_6/block_design_mdm_1_6.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_mdm_1_6/block_design_mdm_1_6_ooc_trace.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_rst_clk_wiz_1_100M_4/block_design_rst_clk_wiz_1_100M_4_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_1/bd_70a8_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_2/bd_70a8_arinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_3/bd_70a8_rinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_4/bd_70a8_awinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_5/bd_70a8_winsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_6/bd_70a8_binsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_7/bd_70a8_aroutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_8/bd_70a8_routsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_9/bd_70a8_awoutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_10/bd_70a8_woutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_11/bd_70a8_boutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_12/bd_70a8_arni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_13/bd_70a8_rni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_14/bd_70a8_awni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_15/bd_70a8_wni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_16/bd_70a8_bni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_20/bd_70a8_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_21/bd_70a8_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_22/bd_70a8_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_23/bd_70a8_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_24/bd_70a8_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_25/bd_70a8_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_29/bd_70a8_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_30/bd_70a8_sarn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_31/bd_70a8_srn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_32/bd_70a8_sawn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_33/bd_70a8_swn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_34/bd_70a8_sbn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_35/bd_70a8_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_36/bd_70a8_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_37/bd_70a8_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_38/bd_70a8_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_39/bd_70a8_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_40/bd_70a8_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_42/bd_70a8_m01s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_43/bd_70a8_m01arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_44/bd_70a8_m01rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_45/bd_70a8_m01awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_46/bd_70a8_m01wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_47/bd_70a8_m01bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_49/bd_70a8_m02s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_50/bd_70a8_m02arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_51/bd_70a8_m02rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_52/bd_70a8_m02awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_53/bd_70a8_m02wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_54/bd_70a8_m02bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_56/bd_70a8_m03s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_57/bd_70a8_m03arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_58/bd_70a8_m03rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_59/bd_70a8_m03awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_60/bd_70a8_m03wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_61/bd_70a8_m03bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_smc_1/smartconnect.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_system_ila_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_system_ila_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_system_ila_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_system_ila_1/bd_0/ip/ip_0/bd_e8a5_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_system_ila_1/bd_0/bd_e8a5_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_system_ila_1/block_design_system_ila_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_1/bd_2da4_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_2/bd_2da4_arinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_3/bd_2da4_rinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_4/bd_2da4_awinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_5/bd_2da4_winsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_6/bd_2da4_binsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_7/bd_2da4_aroutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_8/bd_2da4_routsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_9/bd_2da4_awoutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_10/bd_2da4_woutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_11/bd_2da4_boutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_12/bd_2da4_arni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_13/bd_2da4_rni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_14/bd_2da4_awni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_15/bd_2da4_wni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_16/bd_2da4_bni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_20/bd_2da4_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_21/bd_2da4_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_22/bd_2da4_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_23/bd_2da4_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_24/bd_2da4_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_25/bd_2da4_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_29/bd_2da4_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_30/bd_2da4_sarn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_31/bd_2da4_srn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_35/bd_2da4_s02a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_36/bd_2da4_sawn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_37/bd_2da4_swn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_38/bd_2da4_sbn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_39/bd_2da4_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_40/bd_2da4_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_41/bd_2da4_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_42/bd_2da4_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_43/bd_2da4_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_44/bd_2da4_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_46/bd_2da4_m01s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_47/bd_2da4_m01arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_48/bd_2da4_m01rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_49/bd_2da4_m01awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_50/bd_2da4_m01wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_51/bd_2da4_m01bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_smartconnect_0_0/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_bram_ctrl_0_bram_0/block_design_axi_bram_ctrl_0_bram_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_bram_ctrl_1_bram_0/block_design_axi_bram_ctrl_1_bram_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_datamover_0_0/block_design_axi_datamover_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_axi_datamover_0_0/block_design_axi_datamover_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/block_design_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.gen/sources_1/bd/block_design/ip/block_design_microblaze_0_3/data/mb_bootloop_le.elf]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -173,14 +218,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc]
+read_xdc C:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/Donov/Projects/tmc/tmc_testbench/tmc_testbench.srcs/utils_1/imports/synth_1/block_design_wrapper.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/twpin/prj/fpga/mms/tmc/tmc_testbench/tmc_testbench.srcs/utils_1/imports/synth_1/block_design_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

@@ -13,6 +13,7 @@ vhdl xil_defaultlib  \
 "../../../bd/block_design/ip/block_design_axi_bram_ctrl_0_0/sim/block_design_axi_bram_ctrl_0_0.vhd" \
 "../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_1/sim/bd_2da4_psr_aclk_0.vhd" \
 "../../../bd/block_design/ip/block_design_axi_bram_ctrl_1_0/sim/block_design_axi_bram_ctrl_1_0.vhd" \
+"../../../bd/block_design/ip/block_design_axi_datamover_0_0/sim/block_design_axi_datamover_0_0.vhd" \
 
 # Do not sort compile order
 nosort

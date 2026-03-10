@@ -115,7 +115,7 @@
         "CLKOUT5_MATCHED_ROUTING": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "CLKOUT6_MATCHED_ROUTING": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "CLKOUT7_MATCHED_ROUTING": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
-        "PRIM_SOURCE": [ { "value": "Single_ended_clock_capable_pin", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
+        "PRIM_SOURCE": [ { "value": "Single_ended_clock_capable_pin", "resolve_type": "user", "usage": "all" } ],
         "CLKOUT1_DRIVES": [ { "value": "BUFG", "resolve_type": "user", "usage": "all" } ],
         "CLKOUT2_DRIVES": [ { "value": "BUFG", "resolve_type": "user", "usage": "all" } ],
         "CLKOUT3_DRIVES": [ { "value": "BUFG", "resolve_type": "user", "usage": "all" } ],
@@ -234,7 +234,7 @@
         "CLKOUT5_SEQUENCE_NUMBER": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "CLKOUT6_SEQUENCE_NUMBER": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "CLKOUT7_SEQUENCE_NUMBER": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "USE_BOARD_FLOW": [ { "value": "true", "value_src": "user", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "USE_BOARD_FLOW": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "CLK_IN1_BOARD_INTERFACE": [ { "value": "Custom", "resolve_type": "user", "usage": "all" } ],
         "CLK_IN2_BOARD_INTERFACE": [ { "value": "Custom", "resolve_type": "user", "usage": "all" } ],
         "DIFF_CLK_IN1_BOARD_INTERFACE": [ { "value": "Custom", "resolve_type": "user", "usage": "all" } ],
@@ -636,7 +636,7 @@
             "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
-            "CLK_DOMAIN": [ { "value": "block_design_CLK100MHZ", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "block_design_CLK100MHZ", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "ASSOCIATED_BUSIF": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "ASSOCIATED_RESET": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
@@ -668,5 +668,5 @@
       }
     }
   },
-  "checksum": "cff696c0"
+  "checksum": "5ac3dc43"
 }

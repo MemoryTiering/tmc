@@ -54,20 +54,20 @@
 
 module block_design_sv (
   (* X_INTERFACE_IGNORE = "true" *)
+  input wire CLK100MHZ,
+  (* X_INTERFACE_IGNORE = "true" *)
   input wire usb_uart_rxd,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire usb_uart_txd,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire CLK100MHZ,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire reset
+  input wire CPU_RESETN
 );
 
   block_design inst (
+    .CLK100MHZ(CLK100MHZ),
     .usb_uart_rxd(usb_uart_rxd),
     .usb_uart_txd(usb_uart_txd),
-    .CLK100MHZ(CLK100MHZ),
-    .reset(reset)
+    .CPU_RESETN(CPU_RESETN)
   );
 
 endmodule

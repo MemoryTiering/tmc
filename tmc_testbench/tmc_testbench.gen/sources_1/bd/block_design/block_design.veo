@@ -54,10 +54,10 @@
 
 // INST_TAG     ------ Begin cut for INSTANTIATION Template ------
 block_design your_instance_name (
+  .CLK100MHZ(CLK100MHZ), // input wire CLK100MHZ
   .usb_uart_rxd(usb_uart_rxd), // input wire usb_uart_rxd
   .usb_uart_txd(usb_uart_txd), // output wire usb_uart_txd
-  .CLK100MHZ(CLK100MHZ), // input wire CLK100MHZ
-  .reset(reset) // input wire reset
+  .CPU_RESETN(CPU_RESETN) // input wire CPU_RESETN
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

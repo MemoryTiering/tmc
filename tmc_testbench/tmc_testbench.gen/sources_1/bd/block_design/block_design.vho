@@ -53,10 +53,10 @@
 -- COMP_TAG     ------ Begin cut for COMPONENT Declaration ------
 COMPONENT block_design
   PORT (
+    CLK100MHZ : IN STD_LOGIC;
     usb_uart_rxd : IN STD_LOGIC;
     usb_uart_txd : OUT STD_LOGIC;
-    CLK100MHZ : IN STD_LOGIC;
-    reset : IN STD_LOGIC
+    CPU_RESETN : IN STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -67,10 +67,10 @@ END COMPONENT;
 -- INST_TAG     ------ Begin cut for INSTANTIATION Template ------
 your_instance_name : block_design
   PORT MAP (
+    CLK100MHZ => CLK100MHZ,
     usb_uart_rxd => usb_uart_rxd,
     usb_uart_txd => usb_uart_txd,
-    CLK100MHZ => CLK100MHZ,
-    reset => reset
+    CPU_RESETN => CPU_RESETN
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

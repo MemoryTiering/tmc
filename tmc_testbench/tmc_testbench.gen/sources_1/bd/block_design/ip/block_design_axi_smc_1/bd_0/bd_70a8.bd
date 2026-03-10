@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x70959AB2F847980D",
+      "boundary_crc": "0x9066FB9901D594E7",
       "design_src": "SBD",
       "device": "xc7a100tcsg324-1",
       "name": "bd_70a8",
@@ -801,16 +801,16 @@
             "value_src": "default"
           },
           "ARUSER_WIDTH": {
-            "value": "114",
-            "value_src": "ip"
+            "value": "0",
+            "value_src": "default"
           },
           "AWUSER_WIDTH": {
-            "value": "114",
-            "value_src": "ip"
+            "value": "0",
+            "value_src": "default"
           },
           "BUSER_WIDTH": {
             "value": "0",
-            "value_src": "default_prop"
+            "value_src": "default"
           },
           "CLK_DOMAIN": {
             "value": "/clk_wiz_1_clk_out1",
@@ -829,24 +829,24 @@
             "value_src": "default"
           },
           "HAS_BURST": {
-            "value": "1",
-            "value_src": "default"
+            "value": "0",
+            "value_src": "ip"
           },
           "HAS_CACHE": {
-            "value": "1",
-            "value_src": "default"
+            "value": "0",
+            "value_src": "ip"
           },
           "HAS_LOCK": {
-            "value": "1",
-            "value_src": "default"
+            "value": "0",
+            "value_src": "ip"
           },
           "HAS_PROT": {
             "value": "1",
             "value_src": "default"
           },
           "HAS_QOS": {
-            "value": "1",
-            "value_src": "default"
+            "value": "0",
+            "value_src": "ip"
           },
           "HAS_REGION": {
             "value": "0",
@@ -861,8 +861,8 @@
             "value_src": "default"
           },
           "ID_WIDTH": {
-            "value": "2",
-            "value_src": "ip"
+            "value": "0",
+            "value_src": "default"
           },
           "INSERT_VIP": {
             "value": "0",
@@ -888,8 +888,8 @@
             "value_src": "ip_prop"
           },
           "PROTOCOL": {
-            "value": "AXI4",
-            "value_src": "default"
+            "value": "AXI4LITE",
+            "value_src": "ip"
           },
           "READ_WRITE_MODE": {
             "value": "READ_WRITE",
@@ -899,8 +899,8 @@
             "value": "0"
           },
           "RUSER_WIDTH": {
-            "value": "14",
-            "value_src": "ip"
+            "value": "0",
+            "value_src": "default"
           },
           "SUPPORTS_NARROW_BURST": {
             "value": "0"
@@ -909,8 +909,8 @@
             "value": "0"
           },
           "WUSER_WIDTH": {
-            "value": "14",
-            "value_src": "ip"
+            "value": "0",
+            "value_src": "default"
           }
         },
         "memory_map_ref": "M03_AXI",
@@ -3670,7 +3670,7 @@
                 "value": "1"
               },
               "NUM_SEG": {
-                "value": "5"
+                "value": "4"
               },
               "NUM_WRITE_OUTSTANDING": {
                 "value": "1"
@@ -3757,33 +3757,12 @@
                 "value": "0b0000000000000000000000000000000000000000000000000000000000000011"
               },
               "SEG003_SIZE": {
-                "value": "16"
+                "value": "17"
               },
               "SEG003_SUPPORTS_READ": {
                 "value": "1"
               },
               "SEG003_SUPPORTS_WRITE": {
-                "value": "1"
-              },
-              "SEG004_BASE_ADDR": {
-                "value": "0x00000000C0010000"
-              },
-              "SEG004_SECURE_READ": {
-                "value": "0"
-              },
-              "SEG004_SECURE_WRITE": {
-                "value": "0"
-              },
-              "SEG004_SEP_ROUTE": {
-                "value": "0b0000000000000000000000000000000000000000000000000000000000000111"
-              },
-              "SEG004_SIZE": {
-                "value": "16"
-              },
-              "SEG004_SUPPORTS_READ": {
-                "value": "1"
-              },
-              "SEG004_SUPPORTS_WRITE": {
                 "value": "1"
               },
               "SINGLE_ISSUING": {
@@ -3866,7 +3845,7 @@
                 "value": "READ_WRITE"
               },
               "SEP_ROUTE_WIDTH": {
-                "value": "3"
+                "value": "2"
               },
               "SINGLE_ISSUING": {
                 "value": "1"
@@ -3984,7 +3963,7 @@
                 "value": "1"
               },
               "NUM_SEG": {
-                "value": "5"
+                "value": "4"
               },
               "NUM_WRITE_OUTSTANDING": {
                 "value": "1"
@@ -4035,15 +4014,6 @@
                 "value": "32"
               },
               "SEP003_WDATA_WIDTH": {
-                "value": "32"
-              },
-              "SEP004_PROTOCOL": {
-                "value": "AXI4LITE"
-              },
-              "SEP004_RDATA_WIDTH": {
-                "value": "32"
-              },
-              "SEP004_WDATA_WIDTH": {
                 "value": "32"
               },
               "SINGLE_ISSUING": {
@@ -5439,7 +5409,7 @@
                 "value": "1"
               },
               "NUM_SEG": {
-                "value": "5"
+                "value": "4"
               },
               "NUM_WRITE_OUTSTANDING": {
                 "value": "1"
@@ -5526,33 +5496,12 @@
                 "value": "0b0000000000000000000000000000000000000000000000000000000000000011"
               },
               "SEG003_SIZE": {
-                "value": "16"
+                "value": "17"
               },
               "SEG003_SUPPORTS_READ": {
                 "value": "1"
               },
               "SEG003_SUPPORTS_WRITE": {
-                "value": "1"
-              },
-              "SEG004_BASE_ADDR": {
-                "value": "0x00000000C0010000"
-              },
-              "SEG004_SECURE_READ": {
-                "value": "0"
-              },
-              "SEG004_SECURE_WRITE": {
-                "value": "0"
-              },
-              "SEG004_SEP_ROUTE": {
-                "value": "0b0000000000000000000000000000000000000000000000000000000000000111"
-              },
-              "SEG004_SIZE": {
-                "value": "16"
-              },
-              "SEG004_SUPPORTS_READ": {
-                "value": "1"
-              },
-              "SEG004_SUPPORTS_WRITE": {
                 "value": "1"
               },
               "SINGLE_ISSUING": {
@@ -5650,7 +5599,7 @@
                 "value": "READ_WRITE"
               },
               "SEP_ROUTE_WIDTH": {
-                "value": "3"
+                "value": "2"
               },
               "SINGLE_ISSUING": {
                 "value": "1"
@@ -5768,7 +5717,7 @@
                 "value": "1"
               },
               "NUM_SEG": {
-                "value": "5"
+                "value": "4"
               },
               "NUM_WRITE_OUTSTANDING": {
                 "value": "1"
@@ -5819,15 +5768,6 @@
                 "value": "32"
               },
               "SEP003_WDATA_WIDTH": {
-                "value": "32"
-              },
-              "SEP004_PROTOCOL": {
-                "value": "AXI4LITE"
-              },
-              "SEP004_RDATA_WIDTH": {
-                "value": "32"
-              },
-              "SEP004_WDATA_WIDTH": {
                 "value": "32"
               },
               "SINGLE_ISSUING": {
@@ -12548,13 +12488,16 @@
                 "value": "0"
               },
               "IS_CASCADED": {
-                "value": "1"
+                "value": "0"
               },
               "MEP_IDENTIFIER_WIDTH": {
                 "value": "2"
               },
               "M_MAX_BURST_LENGTH": {
                 "value": "0"
+              },
+              "M_PROTOCOL": {
+                "value": "AXI4LITE"
               },
               "NUM_MSC": {
                 "value": "4"

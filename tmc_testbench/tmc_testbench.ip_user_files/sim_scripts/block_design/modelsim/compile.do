@@ -20,6 +20,7 @@ vlib modelsim_lib/msim/axi_vip_v1_1_22
 vlib modelsim_lib/msim/gigantic_mux
 vlib modelsim_lib/msim/xlconcat_v2_1_7
 vlib modelsim_lib/msim/axi_bram_ctrl_v4_1_13
+vlib modelsim_lib/msim/axi_datamover_v5_1_37
 
 vmap xilinx_vip modelsim_lib/msim/xilinx_vip
 vmap xpm modelsim_lib/msim/xpm
@@ -40,6 +41,7 @@ vmap axi_vip_v1_1_22 modelsim_lib/msim/axi_vip_v1_1_22
 vmap gigantic_mux modelsim_lib/msim/gigantic_mux
 vmap xlconcat_v2_1_7 modelsim_lib/msim/xlconcat_v2_1_7
 vmap axi_bram_ctrl_v4_1_13 modelsim_lib/msim/axi_bram_ctrl_v4_1_13
+vmap axi_datamover_v5_1_37 modelsim_lib/msim/axi_datamover_v5_1_37
 
 vlog -work xilinx_vip  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
 "C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
@@ -126,92 +128,102 @@ vlog -work smartconnect_v1_0  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v
 "../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0848/hdl/sc_switchboard_v1_0_vl_rfs.sv" \
 
 vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_2/sim/bd_70a8_arsw_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_3/sim/bd_70a8_rsw_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_4/sim/bd_70a8_awsw_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_5/sim/bd_70a8_wsw_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_6/sim/bd_70a8_bsw_0.sv" \
-
-vlog -work smartconnect_v1_0  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3d9a/hdl/sc_mmu_v1_0_vl_rfs.sv" \
-
-vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_7/sim/bd_70a8_s00mmu_0.sv" \
-
-vlog -work smartconnect_v1_0  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/7785/hdl/sc_transaction_regulator_v1_0_vl_rfs.sv" \
-
-vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_8/sim/bd_70a8_s00tr_0.sv" \
-
-vlog -work smartconnect_v1_0  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3051/hdl/sc_si_converter_v1_0_vl_rfs.sv" \
-
-vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_9/sim/bd_70a8_s00sic_0.sv" \
-
-vlog -work smartconnect_v1_0  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/852f/hdl/sc_axi2sc_v1_0_vl_rfs.sv" \
-
-vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_10/sim/bd_70a8_s00a2s_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_2/sim/bd_70a8_arinsw_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_3/sim/bd_70a8_rinsw_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_4/sim/bd_70a8_awinsw_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_5/sim/bd_70a8_winsw_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_6/sim/bd_70a8_binsw_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_7/sim/bd_70a8_aroutsw_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_8/sim/bd_70a8_routsw_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_9/sim/bd_70a8_awoutsw_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_10/sim/bd_70a8_woutsw_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_11/sim/bd_70a8_boutsw_0.sv" \
 
 vlog -work smartconnect_v1_0  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
 "../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/sc_node_v1_0_vl_rfs.sv" \
 
 vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_11/sim/bd_70a8_sarn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_12/sim/bd_70a8_srn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_13/sim/bd_70a8_sawn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_14/sim/bd_70a8_swn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_15/sim/bd_70a8_sbn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_16/sim/bd_70a8_s01mmu_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_17/sim/bd_70a8_s01tr_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_18/sim/bd_70a8_s01sic_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_19/sim/bd_70a8_s01a2s_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_20/sim/bd_70a8_sarn_1.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_21/sim/bd_70a8_srn_1.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_22/sim/bd_70a8_sawn_1.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_23/sim/bd_70a8_swn_1.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_24/sim/bd_70a8_sbn_1.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_12/sim/bd_70a8_arni_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_13/sim/bd_70a8_rni_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_14/sim/bd_70a8_awni_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_15/sim/bd_70a8_wni_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_16/sim/bd_70a8_bni_0.sv" \
+
+vlog -work smartconnect_v1_0  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
+"../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3d9a/hdl/sc_mmu_v1_0_vl_rfs.sv" \
+
+vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_17/sim/bd_70a8_s00mmu_0.sv" \
+
+vlog -work smartconnect_v1_0  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
+"../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/7785/hdl/sc_transaction_regulator_v1_0_vl_rfs.sv" \
+
+vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_18/sim/bd_70a8_s00tr_0.sv" \
+
+vlog -work smartconnect_v1_0  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
+"../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3051/hdl/sc_si_converter_v1_0_vl_rfs.sv" \
+
+vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_19/sim/bd_70a8_s00sic_0.sv" \
+
+vlog -work smartconnect_v1_0  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
+"../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/852f/hdl/sc_axi2sc_v1_0_vl_rfs.sv" \
+
+vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_20/sim/bd_70a8_s00a2s_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_21/sim/bd_70a8_sarn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_22/sim/bd_70a8_srn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_23/sim/bd_70a8_sawn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_24/sim/bd_70a8_swn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_25/sim/bd_70a8_sbn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_26/sim/bd_70a8_s01mmu_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_27/sim/bd_70a8_s01tr_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_28/sim/bd_70a8_s01sic_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_29/sim/bd_70a8_s01a2s_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_30/sim/bd_70a8_sarn_1.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_31/sim/bd_70a8_srn_1.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_32/sim/bd_70a8_sawn_1.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_33/sim/bd_70a8_swn_1.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_34/sim/bd_70a8_sbn_1.sv" \
 
 vlog -work smartconnect_v1_0  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
 "../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/fca9/hdl/sc_sc2axi_v1_0_vl_rfs.sv" \
 
 vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_25/sim/bd_70a8_m00s2a_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_26/sim/bd_70a8_m00arn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_27/sim/bd_70a8_m00rn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_28/sim/bd_70a8_m00awn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_29/sim/bd_70a8_m00wn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_30/sim/bd_70a8_m00bn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_35/sim/bd_70a8_m00s2a_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_36/sim/bd_70a8_m00arn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_37/sim/bd_70a8_m00rn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_38/sim/bd_70a8_m00awn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_39/sim/bd_70a8_m00wn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_40/sim/bd_70a8_m00bn_0.sv" \
 
 vlog -work smartconnect_v1_0  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
 "../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/e44a/hdl/sc_exit_v1_0_vl_rfs.sv" \
 
 vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_31/sim/bd_70a8_m00e_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_32/sim/bd_70a8_m01s2a_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_33/sim/bd_70a8_m01arn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_34/sim/bd_70a8_m01rn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_35/sim/bd_70a8_m01awn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_36/sim/bd_70a8_m01wn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_37/sim/bd_70a8_m01bn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_38/sim/bd_70a8_m01e_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_39/sim/bd_70a8_m02s2a_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_40/sim/bd_70a8_m02arn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_41/sim/bd_70a8_m02rn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_42/sim/bd_70a8_m02awn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_43/sim/bd_70a8_m02wn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_44/sim/bd_70a8_m02bn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_45/sim/bd_70a8_m02e_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_46/sim/bd_70a8_m03s2a_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_47/sim/bd_70a8_m03arn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_48/sim/bd_70a8_m03rn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_49/sim/bd_70a8_m03awn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_50/sim/bd_70a8_m03wn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_51/sim/bd_70a8_m03bn_0.sv" \
-"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_52/sim/bd_70a8_m03e_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_41/sim/bd_70a8_m00e_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_42/sim/bd_70a8_m01s2a_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_43/sim/bd_70a8_m01arn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_44/sim/bd_70a8_m01rn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_45/sim/bd_70a8_m01awn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_46/sim/bd_70a8_m01wn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_47/sim/bd_70a8_m01bn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_48/sim/bd_70a8_m01e_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_49/sim/bd_70a8_m02s2a_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_50/sim/bd_70a8_m02arn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_51/sim/bd_70a8_m02rn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_52/sim/bd_70a8_m02awn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_53/sim/bd_70a8_m02wn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_54/sim/bd_70a8_m02bn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_55/sim/bd_70a8_m02e_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_56/sim/bd_70a8_m03s2a_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_57/sim/bd_70a8_m03arn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_58/sim/bd_70a8_m03rn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_59/sim/bd_70a8_m03awn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_60/sim/bd_70a8_m03wn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_61/sim/bd_70a8_m03bn_0.sv" \
+"../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/ip/ip_62/sim/bd_70a8_m03e_0.sv" \
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
 "../../../bd/block_design/ip/block_design_axi_smc_1/bd_0/sim/bd_70a8.v" \
@@ -235,7 +247,6 @@ vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1
 "../../../bd/block_design/ip/block_design_axi_smc_1/sim/block_design_axi_smc_1.sv" \
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../bd/block_design/ip/block_design_system_ila_1/bd_0/sim/bd_e8a5.v" \
 "../../../bd/block_design/ip/block_design_system_ila_1/bd_0/ip/ip_0/sim/bd_e8a5_ila_lib_0.v" \
 
 vlog -work gigantic_mux  -incr -mfcu  "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
@@ -254,9 +265,8 @@ vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../tmc_testbench.gen/s
 "../../../bd/block_design/ip/block_design_system_ila_1/bd_0/ip/ip_4/sim/bd_e8a5_slot_0_b_0.v" \
 "../../../bd/block_design/ip/block_design_system_ila_1/bd_0/ip/ip_5/sim/bd_e8a5_slot_0_ar_0.v" \
 "../../../bd/block_design/ip/block_design_system_ila_1/bd_0/ip/ip_6/sim/bd_e8a5_slot_0_r_0.v" \
+"../../../bd/block_design/ip/block_design_system_ila_1/bd_0/sim/bd_e8a5.v" \
 "../../../bd/block_design/ip/block_design_system_ila_1/sim/block_design_system_ila_1.v" \
-"../../../bd/block_design/ipshared/b4d7/hdl/axi_latency_injector.v" \
-"../../../bd/block_design/ip/block_design_axi_latency_injector_0_0/sim/block_design_axi_latency_injector_0_0.v" \
 
 vcom -work axi_bram_ctrl_v4_1_13  -93  \
 "../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd" \
@@ -266,34 +276,57 @@ vcom -work xil_defaultlib  -93  \
 "../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_1/sim/bd_2da4_psr_aclk_0.vhd" \
 
 vlog -work xil_defaultlib  -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L xilinx_vip "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_2/sim/bd_2da4_arsw_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_3/sim/bd_2da4_rsw_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_4/sim/bd_2da4_awsw_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_5/sim/bd_2da4_wsw_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_6/sim/bd_2da4_bsw_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_7/sim/bd_2da4_s00mmu_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_8/sim/bd_2da4_s00tr_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_9/sim/bd_2da4_s00sic_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_10/sim/bd_2da4_s00a2s_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_11/sim/bd_2da4_sarn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_12/sim/bd_2da4_srn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_13/sim/bd_2da4_sawn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_14/sim/bd_2da4_swn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_15/sim/bd_2da4_sbn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_16/sim/bd_2da4_m00s2a_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_17/sim/bd_2da4_m00arn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_18/sim/bd_2da4_m00rn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_19/sim/bd_2da4_m00awn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_20/sim/bd_2da4_m00wn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_21/sim/bd_2da4_m00bn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_22/sim/bd_2da4_m00e_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_23/sim/bd_2da4_m01s2a_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_24/sim/bd_2da4_m01arn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_25/sim/bd_2da4_m01rn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_26/sim/bd_2da4_m01awn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_27/sim/bd_2da4_m01wn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_28/sim/bd_2da4_m01bn_0.sv" \
-"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_29/sim/bd_2da4_m01e_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_2/sim/bd_2da4_arinsw_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_3/sim/bd_2da4_rinsw_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_4/sim/bd_2da4_awinsw_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_5/sim/bd_2da4_winsw_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_6/sim/bd_2da4_binsw_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_7/sim/bd_2da4_aroutsw_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_8/sim/bd_2da4_routsw_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_9/sim/bd_2da4_awoutsw_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_10/sim/bd_2da4_woutsw_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_11/sim/bd_2da4_boutsw_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_12/sim/bd_2da4_arni_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_13/sim/bd_2da4_rni_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_14/sim/bd_2da4_awni_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_15/sim/bd_2da4_wni_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_16/sim/bd_2da4_bni_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_17/sim/bd_2da4_s00mmu_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_18/sim/bd_2da4_s00tr_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_19/sim/bd_2da4_s00sic_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_20/sim/bd_2da4_s00a2s_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_21/sim/bd_2da4_sarn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_22/sim/bd_2da4_srn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_23/sim/bd_2da4_sawn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_24/sim/bd_2da4_swn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_25/sim/bd_2da4_sbn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_26/sim/bd_2da4_s01mmu_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_27/sim/bd_2da4_s01tr_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_28/sim/bd_2da4_s01sic_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_29/sim/bd_2da4_s01a2s_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_30/sim/bd_2da4_sarn_1.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_31/sim/bd_2da4_srn_1.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_32/sim/bd_2da4_s02mmu_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_33/sim/bd_2da4_s02tr_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_34/sim/bd_2da4_s02sic_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_35/sim/bd_2da4_s02a2s_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_36/sim/bd_2da4_sawn_1.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_37/sim/bd_2da4_swn_1.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_38/sim/bd_2da4_sbn_1.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_39/sim/bd_2da4_m00s2a_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_40/sim/bd_2da4_m00arn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_41/sim/bd_2da4_m00rn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_42/sim/bd_2da4_m00awn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_43/sim/bd_2da4_m00wn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_44/sim/bd_2da4_m00bn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_45/sim/bd_2da4_m00e_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_46/sim/bd_2da4_m01s2a_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_47/sim/bd_2da4_m01arn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_48/sim/bd_2da4_m01rn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_49/sim/bd_2da4_m01awn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_50/sim/bd_2da4_m01wn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_51/sim/bd_2da4_m01bn_0.sv" \
+"../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/ip/ip_52/sim/bd_2da4_m01e_0.sv" \
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
 "../../../bd/block_design/ip/block_design_smartconnect_0_0/bd_0/sim/bd_2da4.v" \
@@ -305,8 +338,19 @@ vcom -work xil_defaultlib  -93  \
 "../../../bd/block_design/ip/block_design_axi_bram_ctrl_1_0/sim/block_design_axi_bram_ctrl_1_0.vhd" \
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
+"../../../bd/block_design/ipshared/b4d7/hdl/axi_latency_injector.v" \
+"../../../bd/block_design/ip/block_design_axi_latency_injector_0_0/sim/block_design_axi_latency_injector_0_0.v" \
 "../../../bd/block_design/ip/block_design_axi_bram_ctrl_0_bram_0/sim/block_design_axi_bram_ctrl_0_bram_0.v" \
 "../../../bd/block_design/ip/block_design_axi_bram_ctrl_1_bram_0/sim/block_design_axi_bram_ctrl_1_bram_0.v" \
+
+vcom -work axi_datamover_v5_1_37  -93  \
+"../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib  -93  \
+"../../../bd/block_design/ip/block_design_axi_datamover_0_0/sim/block_design_axi_datamover_0_0.vhd" \
+
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/a415" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/f0b6/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/00fe/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/ec67/hdl" "+incdir+../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/5431/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/4e08/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/0568/hdl/verilog" "+incdir+../../../../tmc_testbench.gen/sources_1/bd/block_design/ipshared/3556/hdl/verilog" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
+"../../../bd/block_design/ip/block_design_tmc_controller_wrapp_0_0/sim/block_design_tmc_controller_wrapp_0_0.v" \
 "../../../bd/block_design/sim/block_design.v" \
 
 vlog -work xil_defaultlib \
