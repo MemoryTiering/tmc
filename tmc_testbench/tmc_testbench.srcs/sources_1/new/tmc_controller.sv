@@ -204,7 +204,7 @@ module tmc_controller #(
         begin
             // AXI DataMover command format (72-bit):
             // [22:0]   BTT
-            // [23]     TYPE (0=incrementing)
+            // [23]     TYPE (1=INCR, 0=FIXED)
             // [29:24]  DSA
             // [30]     EOF
             // [31]     DRR
