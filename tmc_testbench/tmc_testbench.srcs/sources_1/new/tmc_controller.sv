@@ -199,7 +199,10 @@ module tmc_controller #(
 
     function automatic logic [71:0] mk_datamover_cmd(input logic [31:0] src_addr, input logic [22:0] btt);
         logic [71:0] cmd = '0;
-        cmd[31:0] = src_addr; cmd[54:32] = btt; cmd[55] = 1'b1;
+        cmd[22:0] = btt;
+        cmd[23] = 1'b1;
+        cmd[30] = 1'b1;
+        cmd[63:32] = src_addr;
         return cmd;
     endfunction
 
